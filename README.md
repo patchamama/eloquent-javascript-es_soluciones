@@ -2,6 +2,22 @@
 
 https://eloquent-javascript-es.vercel.app/
 
+## Ejemplos interesantes
+
+- [3. Funciones](https://eloquent-javascript-es.vercel.app/03_functions.html)
+
+```js
+function multiplier(factor) {
+  return (number) => number * factor;
+}
+
+let twice = multiplier(2);
+console.log(twice(5));
+// → 10
+```
+
+## Respuesta a ejercicios
+
 [2. Estructura del Programa](https://eloquent-javascript-es.vercel.app/02_program_structure.html)
 
 - Haciendo un triángulo con bucles
@@ -45,3 +61,5 @@ if (Number.isNaN(len)) {
   }
 }
 ```
+
+- [3. Funciones](https://eloquent-javascript-es.vercel.app/03_functions.html)
