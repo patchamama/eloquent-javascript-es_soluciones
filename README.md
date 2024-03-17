@@ -8,6 +8,8 @@ Code sandbox y ejercicios: https://eloquentjavascript.net/code/
 
 Debug online: https://pythontutor.com/render.html#mode=display
 
+Javascript references: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+
 ## Ejemplos interesantes
 
 - [3. Funciones](https://eloquent-javascript-es.vercel.app/03_functions.html)
