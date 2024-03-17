@@ -82,13 +82,15 @@ console.log(min(0, -10));
 - Recursión
 
 ```js
-const isEven = (n) => {
-  //if (n < 0) return "??";
-  //if (n === 0) return true
-  //else if (n === 1) return false
-  //else return isEven(n-2);
-  return n < 0 ? "??" : n === 0 ? true : n === 1 ? false : isEven(n - 2);
-};
+//const isEven = n => {
+//  if (n < 0) return "??";
+//  if (n === 0) return true
+//  else if (n === 1) return false
+//  else return isEven(n-2);
+//}
+
+const isEven = (n) =>
+  n < 0 ? "??" : n === 0 ? true : n === 1 ? false : isEven(n - 2);
 
 console.log(isEven(50));
 // → true
@@ -96,4 +98,35 @@ console.log(isEven(75));
 // → false
 console.log(isEven(-1));
 // → ??
+```
+
+- Contando frijoles
+
+```js
+//const countBs = str => {
+//  let count = 0
+//  for (p = 0; p < str.length; p++) {
+//    count += (str.at(p) === 'B') ? 1: 0;
+//  }
+//  return count
+//}
+
+const countBs = (str) =>
+  str.split("").reduce((a, b) => (b === "B" ? a + 1 : a), 0);
+
+//const countChar = (str, char) => {
+//  let count = 0
+//  for (p = 0; p < str.length; p++) {
+//    count += (str.at(p) === char) ? 1: 0;
+//  }
+//  return count
+//}
+
+const countChar = (str, char) =>
+  str.split("").reduce((a, b) => (b === char ? a + 1 : a), 0);
+
+console.log(countBs("BOB"));
+// → 2
+console.log(countChar("kakkerlak", "k"));
+// → 4
 ```
