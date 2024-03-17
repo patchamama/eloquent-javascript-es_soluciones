@@ -25,24 +25,34 @@ console.log(twice(5));
 - Haciendo un triángulo con bucles
 
 ```js
-for (character = "#"; character.length <= 7; character += "#") {
-  console.log(character);
-}
+//for (character = "#"; character.length <= 7; character += "#") {
+//  console.log(character);
+//}
+
+console.log(
+  Array(7)
+    .fill("#")
+    .map((_, index) => "#".repeat(index + 1))
+    .join("\n")
+);
 ```
 
 - FizzBuzz
 
 ```js
-for (num = 1; num <= 100; num++) {
-  let word = "";
-  if (num % 3 === 0) {
-    word = "Fizz";
-  }
-  if (num % 5 === 0) {
-    word += "Buzz";
-  }
-  console.log(word ? word : num);
-}
+//for (num = 1; num <= 100; num++) {
+//  let word = "";
+//  if (num % 3 === 0) {
+//    word = "Fizz";
+//  }
+//  if (num % 5 === 0) {
+//    word += "Buzz";
+//  }
+//  console.log(word ? word : num);
+//}
+
+for (let num = 1; num <= 100; num++)
+  console.log((num % 3 ? "" : "Fizz") + (num % 5 ? "" : "Buzz") || num);
 ```
 
 - Tablero de ajedrez
@@ -52,15 +62,20 @@ let len = Number(prompt("Ancho del tablero? "));
 if (Number.isNaN(len)) {
   console.error("Ancho del tablero debe de ser un número.");
 } else {
-  for (row = 0; row < len; row++) {
-    let whiteSt = row % 2 === 0 ? " " : "#";
-    let blackSt = row % 2 === 0 ? "#" : " ";
-    let rowSt = "";
-    for (col = 0; col < len; col++) {
-      rowSt += col % 2 === 0 ? whiteSt : blackSt;
-    }
-    console.log(rowSt);
-  }
+  //  for (row = 0; row < len; row++) {
+  //    let whiteSt = row % 2 === 0 ? " " : "#";
+  //    let blackSt = row % 2 === 0 ? "#" : " ";
+  //    let rowSt = "";
+  //    for (col = 0; col < len; col++) {
+  //      rowSt += col % 2 === 0 ? whiteSt : blackSt;
+  //    }
+  //    console.log(rowSt);
+  console.log(
+    Array(len)
+      .fill("")
+      .map((_, index) => (index % 2 === 0 ? "# " : " #").repeat(len))
+      .join("\n")
+  );
 }
 ```
 
@@ -69,9 +84,7 @@ if (Number.isNaN(len)) {
 - Mínimo
 
 ```js
-const min = (a, b) => {
-  return a < b ? a : b;
-};
+const min = (a, b) => (a < b ? a : b);
 
 console.log(min(0, 10));
 // → 0
