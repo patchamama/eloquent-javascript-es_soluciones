@@ -1,10 +1,14 @@
 # Soluciones al curso de Javascript Eloquent 4ta edición
 
-Url del curso: https://eloquent-javascript-es.vercel.app/
+Curso en español: https://eloquent-javascript-es.vercel.app/
+
+Curso original en inglés: https://eloquentjavascript.net
+
+Code sandbox y ejercicios: https://eloquentjavascript.net/code/
 
 Debug online: https://pythontutor.com/render.html#mode=display
 
-## Ejemplos interesantes
+## Ejemplos interesantes
 
 - [3. Funciones](https://eloquent-javascript-es.vercel.app/03_functions.html)
 
