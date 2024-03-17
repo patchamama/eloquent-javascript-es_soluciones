@@ -76,6 +76,15 @@ if (Number.isNaN(len)) {
       .map((_, index) => (index % 2 === 0 ? "# " : " #").repeat(len))
       .join("\n")
   );
+
+  // Mejora con una sola línea y una función
+  const generateBoard = (size) =>
+    [...Array(size)]
+      .map((_, y) =>
+        [...Array(size)].map((_, x) => ((x + y) % 2 === 0 ? " " : "#")).join("")
+      )
+      .join("\n");
+  console.log(generateBoard(10));
 }
 ```
 
