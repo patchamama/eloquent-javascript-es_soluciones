@@ -65,3 +65,16 @@ if (Number.isNaN(len)) {
 ```
 
 - [3. Funciones](https://eloquent-javascript-es.vercel.app/03_functions.html)
+
+- Mínimo
+
+```js
+const min = (a, b) => {
+  return a < b ? a : b;
+};
+
+console.log(min(0, 10));
+// → 0
+console.log(min(0, -10));
+// → -10
+```
