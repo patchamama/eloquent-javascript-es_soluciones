@@ -22,6 +22,22 @@ function multiplier(factor) {
 let twice = multiplier(2);
 console.log(twice(5));
 // → 10
+
+
+//Cortocircuito de operadores lógicos
+//El operador ?? se asemeja a ||, pero devuelve el valor de la derecha solo si el de la izquierda es null o undefined, no si es algún otro valor que se pueda convertir en false. A menudo, este comportamiento es preferible al de ||. El operador && funciona de manera similar pero en sentido contrario. Cuando el valor a su izquierda es algo que se convierte en false, devuelve ese valor, y de lo contrario devuelve el valor de su derecha.
+
+console.log(null || "usuario")
+// → usuario
+console.log("Agnes" || "usuario")
+// → Agnes
+console.log(0 || 100);
+// → 100
+console.log(0 ?? 100);
+// → 0
+console.log(null ?? 100);
+// → 100
+
 ```
 
 ## Respuesta a ejercicios
