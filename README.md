@@ -177,3 +177,41 @@ console.log(countBs("BOB"));
 console.log(countChar("kakkerlak", "k"));
 // → 4
 ```
+
+### [3. Estructura del Programa](https://eloquent-javascript-es.vercel.app/04_data.html))
+
+- La suma de un rango
+
+```js
+// Tu código aquí.
+
+//function range(ini, end, inc=1) {
+//  let result = []
+//  for (a=ini; ini < end ? a <= end : a >= end; a += inc) {
+//    result.push(a)
+//    }
+//  return result
+//  }
+
+//const range = (ini, end, inc = 1) => Array.from({ length: Math.ceil((end - ini + 1) / inc) }, (_, i) => ini + (i * inc));
+
+const range = (ini, end, inc=1) => Array(Math.abs(end-ini)+1).
+  fill(0).map( (_, b) => ini+(b*inc))
+
+//function sum(arr) {
+//  let result = 0
+//  for (num of arr) {
+//    result += num
+//    }
+//  return result
+//  }
+
+const sum = (arr) => arr.reduce( (a, b) => a+b,0)
+
+console.log(range(1, 10));
+// → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+console.log(range(5, 2, -1));
+// → [5, 4, 3, 2]
+console.log(sum(range(1, 10)));
+// → 55
+```
