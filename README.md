@@ -178,7 +178,7 @@ console.log(countChar("kakkerlak", "k"));
 // → 4
 ```
 
-### [3. Estructura del Programa](https://eloquent-javascript-es.vercel.app/04_data.html))
+### [4. Estructura del Programa](https://eloquent-javascript-es.vercel.app/04_data.html)
 
 - La suma de un rango
 
