@@ -191,10 +191,8 @@ console.log(countChar("kakkerlak", "k"));
 //  return result
 //  }
 
-//const range = (ini, end, inc = 1) => Array.from({ length: Math.ceil((end - ini + 1) / inc) }, (_, i) => ini + (i * inc));
-
-const range = (ini, end, inc=1) => Array(Math.abs(end-ini)+1).
-  fill(0).map( (_, b) => ini+(b*inc))
+const range = (ini, end, inc=1) => Array(Math.abs((end-ini)+1/inc))
+  .fill(0).map( (_, b) => ini+(b*inc))
 
 //function sum(arr) {
 //  let result = 0
@@ -212,4 +210,5 @@ console.log(range(5, 2, -1));
 // → [5, 4, 3, 2]
 console.log(sum(range(1, 10)));
 // → 55
+
 ```
