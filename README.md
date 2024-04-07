@@ -212,3 +212,43 @@ console.log(sum(range(1, 10)));
 // → 55
 
 ```
+
+- Reversión de un array
+
+```js
+//function reverseArray(arr) {
+//  let result = [];
+//  for (elem of arr) {
+//    result.unshift(elem);
+//    }
+//  return result;
+//  }
+
+const reverseArray = arr => 
+  arr.reduce((acc, curr) => [curr, ...acc], []);
+
+//function reverseArrayInPlace(arr) {
+//  let temp = [...arr];
+//  const tempLen = temp.length;
+//  for (a=1; a <= tempLen; a++) {
+//    const last = temp.pop()
+//    arr.shift();
+//    arr.push(last);
+//    }
+//  }
+
+const reverseArrayInPlace = (arr) => { 
+  for (let i = arr.length - 1; i >= 0; i--) arr.push(arr.splice(i, 1)[0]);
+  }
+
+
+let myArray = ["A", "B", "C"];
+console.log(reverseArray(myArray));
+// → ["C", "B", "A"];
+console.log(myArray);
+// → ["A", "B", "C"];
+let arrayValue = [1, 2, 3, 4, 5];
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue);
+// → [5, 4, 3, 2, 1]
+```
