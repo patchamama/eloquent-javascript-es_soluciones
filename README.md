@@ -183,8 +183,6 @@ console.log(countChar("kakkerlak", "k"));
 - La suma de un rango
 
 ```js
-// Tu código aquí.
-
 //function range(ini, end, inc=1) {
 //  let result = []
 //  for (a=ini; ini < end ? a <= end : a >= end; a += inc) {
