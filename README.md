@@ -252,3 +252,33 @@ reverseArrayInPlace(arrayValue);
 console.log(arrayValue);
 // → [5, 4, 3, 2, 1]
 ```
+
+- Lista
+
+```js
+const arrayToList = (arr) => (!arr.length) 
+  ? null
+  : {value: arr[0], rest: arrayToList(arr.slice(1))}
+
+const listToArray = (list) => (!list.rest) 
+   ? list.value 
+   : [].concat(list.value, listToArray(list.rest) )
+
+
+function prepend(value, list) {
+  return {value, rest: list}
+  }
+
+function nth(arr, pos) {
+  return listToArray(arr)[pos]
+  }
+
+console.log(arrayToList([10, 20]));
+// → {value: 10, rest: {value: 20, rest: null}}
+console.log(listToArray(arrayToList([10, 20, 30])));
+// → [10, 20, 30]
+console.log(prepend(10, prepend(20, null)));
+// → {value: 10, rest: {value: 20, rest: null}}
+console.log(nth(arrayToList([10, 20, 30]), 1));
+// → 20
+```
