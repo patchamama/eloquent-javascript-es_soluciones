@@ -298,19 +298,35 @@ console.log(nth1(arrayToList([10, 20, 30]), 1));
 - Comparación profunda
 
 ```js
+//function deepEqual(val1, val2) {
+//  if (typeof val1 !== typeof val2) return false
+//  if ((typeof val1 == "object" && val1 != null) && 
+//     (typeof val2 == "object" && val2 != null)) {
+//    if (Object.keys(val1).length !== Object.keys(val2).length) return false;
+//    for (vkey of Object.keys(val1)) {
+//      if (!Object.keys(val2).includes(vkey)) return false
+//      if ( !deepEqual(val1[vkey], val2[vkey]) ) return false
+//    }
+//  } else {
+//    return val1 === val2
+//  }
+//  return true
+//}
+
+
 function deepEqual(val1, val2) {
-  if (typeof val1 !== typeof val2) return false
-  if ((typeof val1 == "object" && val1 != null) && 
-     (typeof val2 == "object" && val2 != null)) {
-    if (Object.keys(val1).length !== Object.keys(val2).length) return false;
-    for (vkey of Object.keys(val1)) {
-      if (!Object.keys(val2).includes(vkey)) return false
-      if ( !deepEqual(val1[vkey], val2[vkey]) ) return false
-    }
-  } else {
-    return val1 === val2
+  if (typeof val1 !== typeof val2) return false;
+  
+  if (typeof val1 !== "object" || val1 === null) {
+    return val1 === val2;
   }
-  return true
+  
+  const keys1 = Object.keys(val1);
+  const keys2 = Object.keys(val2);
+  
+  if (keys1.length !== keys2.length) return false;
+  
+  return keys1.every(key => deepEqual(val1[key], val2[key]));
 }
 
 let obj = {here: {is: "an"}, object: 2};
