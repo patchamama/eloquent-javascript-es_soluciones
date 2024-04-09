@@ -273,6 +273,16 @@ function nth(arr, pos) {
   return listToArray(arr)[pos]
   }
 
+function nth1(arr, pos) {
+  let i = 0;
+  for (let nodo = arr; nodo; nodo = nodo.rest) {
+    if (i === pos) {
+      return nodo.value
+      }
+    i++
+    }
+  }
+
 console.log(arrayToList([10, 20]));
 // → {value: 10, rest: {value: 20, rest: null}}
 console.log(listToArray(arrayToList([10, 20, 30])));
@@ -280,5 +290,7 @@ console.log(listToArray(arrayToList([10, 20, 30])));
 console.log(prepend(10, prepend(20, null)));
 // → {value: 10, rest: {value: 20, rest: null}}
 console.log(nth(arrayToList([10, 20, 30]), 1));
+// → 20
+console.log(nth1(arrayToList([10, 20, 30]), 1));
 // → 20
 ```
