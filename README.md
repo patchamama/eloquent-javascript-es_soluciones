@@ -10,7 +10,7 @@ Debug online: https://pythontutor.com/render.html#mode=display
 
 Javascript references: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
 
-*Siempre que sea posible, intento poner una solución larga más para quienes se inician y una corta para más avanzados*
+**Siempre que sea posible, intento poner una solución larga más para quienes se inician y una corta para más avanzados**
 
 ## Ejemplos interesantes
 
